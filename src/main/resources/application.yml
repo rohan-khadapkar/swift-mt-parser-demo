@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          swift-inc:
+            client-id: sandbox-id
+            client-secret: sandbox-key
+            authorization-grant-type: urn:ietf:params:oauth:grant-type:jwt-bearer
+            redirect-uri: "{baseUrl}/authorized/okta"
+            scope: swift.alliancecloud.api
+        provider:
+          swift-inc:
+            authorization-uri: https://sandbox.swift.com/oauth2/v1/token
+            token-uri: https://sandbox.swift.com/oauth2/v1/token
